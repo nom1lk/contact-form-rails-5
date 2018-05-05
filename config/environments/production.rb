@@ -103,7 +103,7 @@ Rails.application.configure do
 # GMAIL ENV VARIABLE EDIT - (from prodmatch3)
 # From here: https://stackoverflow.com/questions/13294194/rails-how-to-store-mailer-password-safely
 # https://github.com/nom1lk/prodmatch3/blob/master/config/environments/production.rb
-# i.e. run this too: heroku config:set MAILER_EMAIL=customer.pricing.intelligence@gmail.com MAILER_PASSWORD=password
+# i.e. run this too: heroku config:set GMAIL_USERNAME=customer.pricing.intelligence@gmail.com GMAIL_PASSWORD=password
 config.action_mailer.default_url_options = { :host => 'contact-form-rails-5.herokuapp.com' }  
 config.action_mailer.delivery_method = :smtp  
 config.action_mailer.perform_deliveries = true  
@@ -116,7 +116,7 @@ config.action_mailer.smtp_settings = {
   authentication: "plain",
   enable_starttls_auto: true,
   user_name: ENV["GMAIL_USERNAME"], 
-  password: ENV["GMAIL_PASSWORD"]
+  password: ENV["GMAIL_PASSWORD"] # dc
 }
 
 
